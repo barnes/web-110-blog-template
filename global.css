@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500;600;700;800&display=swap');
+
+:root {
+    font-family: 'Kanit', sans-serif;
+    --background-color: #67595E;
+    --background-accent-color: #A49393;
+    --text-color: #fff;
+    --text-accent-color: #E8B4B8;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 64px;
+    letter-spacing: -5px;
+    color: var(--text-accent-color);
+}
+
+main h1 {
+    font-weight: 400;
+    text-decoration: underline dashed var(--text-accent-color);
+}
+
+nav {
+    display: flex;
+    /* justify-content: space-evenly;  */
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+a {
+    color: var(--text-color);
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: var(--text-accent-color);
+    /* margin-right: 4rem; */
+}
+
+a:hover {
+    color: var(--text-accent-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    width: 75%;
+    background: blue;
+    padding: 1rem;
+}
+
+aside {
+    width: 25%;
+    background: var(--background-accent-color);
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--background-accent-color);
+}
