@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global2.css">
+    <title>Blog Template</title>
+    <script>
+        function myFunction() {
+            let time = new Date();
+            let target = document.getElementById('time');
+            console.log(time);
+            console.log(target);
+            target.innerText = time
+        }
+
+        function displayMenu() {
+            // We get the menu element with the id menu-items
+            let menu = document.getElementById('menu-items');
+
+            // If menu class has the word show, remove it, otherwise add it.
+            if(menu.className.includes('show')){
+                menu.className = "mobile-menu-items";
+            } else {
+                menu.className = menu.className + " show"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Our Blog Template</h1>
+        <h2 id="time"></h2>
+    </header>
+    <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+    </nav>
+    <div class="mobile-menu">
+        <div class="icon">
+            <button onclick="displayMenu()">🍔</button>
+        </div>
+        <div class="mobile-menu-items" id="menu-items">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+    </div>
+    <div class="content">
+        <main>
+            <h1>Blog Post 1</h1>
+            <span>01.01.2023</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi delectus iusto voluptas. Saepe sequi
+                optio excepturi doloribus quis? Nisi ducimus velit ex debitis dolores maiores nam veniam nemo nostrum?
+            </p>
+            <h1>Blog Post 2</h1>
+            <span>01.02.2023</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptas alias aut error. Molestiae
+                illo quis, voluptas provident modi magni praesentium maxime quisquam mollitia illum ad. Fugiat dolorum
+                quod a!</p>
+        </main>
+        <aside>
+            <h1>Sidebar</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla sequi temporibus a. Qui molestiae at quos
+                similique assumenda vitae quod! Inventore porro quo beatae ea quos odit neque velit tenetur.</p>
+        </aside>
+    </div>
+    <footer>
+        <p>Copyright 2023</p>
+    </footer>
+
+</body>
+
+</html>

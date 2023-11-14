@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="challenge.css">
+    <script>
+        function getImage(query) {
+            console.log('get image')
+            let image = 'https://source.unsplash.com/random/300×300?' + query
+            console.log(image);
+            let target = document.getElementById('target');
+            console.log(target);
+            target.setAttribute('src', image);
+            let button = document.getElementById('button')
+            button.remove();
+        }
+    </script>
+</head>
+
+<body>
+    <aside>
+
+        <head>
+            <h1>Challenge</h1>
+        </head>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+        <footer>
+            <p>Copywright 2023</p>
+        </footer>
+    </aside>
+    <main>
+        <h1>https://source.unsplash.com/random/300×300?fruit</h1>
+        <button onclick="getImage('test')" id="button">get image</button>
+        <div class="cards">
+
+            <article>
+                <img src="https://source.unsplash.com/random/300x300?fruit" id="target">
+                <div class="caption">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </article>
+            <article>
+                <img src="https://source.unsplash.com/random/300x300?car">
+                <div class="caption">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </article>
+            <article>
+                <img src="https://source.unsplash.com/random/300x300?computer">
+                <div class="caption">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+            </article>
+            <article>
+                <img src="https://source.unsplash.com/random/300x300?flower">
+                <div class="caption">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+</body>
+
+</html>
