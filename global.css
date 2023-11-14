@@ -8,6 +8,7 @@
     --text-accent-color: #E8B4B8;
 }
 
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -43,7 +44,7 @@ a {
 }
 
 a:hover {
-    color: var(--text-accent-color);
+    color: var(--background-color);
 }
 
 .content {
@@ -65,4 +66,33 @@ aside {
 
 header {
     background-color: var(--background-accent-color);
+}
+
+.mobile-menu {
+    display:none;
+}
+
+.mobile-menu-items {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
+    main {
+        width: 100%;
+    }
+    .mobile-menu{
+        display: flex;
+        padding: 2rem;
+    }
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
 }
