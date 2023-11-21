@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Stopwatch</title>
+    <style>
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        let time = 0;
+        let interval;
+        function timer() {
+            time++;
+            let timeDisplay = document.getElementById('time').innerText = time;
+            console.log(time);
+        }
+        function startTimer() {
+            interval = setInterval(timer, 1000);
+            console.log(time);
+        }
+        function stopTimer() {
+            clearInterval(interval);
+            console.log(time);
+        }
+        function resetTimer() {
+            time = 0;
+            let timeDisplay = document.getElementById('time').innerText = time +'sec';
+            console.log(time);
+        }
+    </script>
+</head>
+<body>
+    <main class="container">
+        <div class="timer">
+            <h1 id="time">0sec</h1>
+        </div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()"">Reset</button>
+    </main>   
+</body>
+</html>
